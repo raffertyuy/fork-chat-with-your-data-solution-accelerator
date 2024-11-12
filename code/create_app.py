@@ -477,6 +477,11 @@ def create_app():
         ConfigHelper.get_active_config_or_default.cache_clear()
         result = ConfigHelper.get_active_config_or_default()
         conversation_flow = result.prompts.conversational_flow
+
+        # log the request header and body
+        logger.debug("[RazType] Request headers: %s", request.headers)
+        logger.debug("[RazType] Request body: %s", request.json)
+
         if conversation_flow == ConversationFlow.CUSTOM.value:
             return await conversation_custom()
         elif conversation_flow == ConversationFlow.BYOD.value:

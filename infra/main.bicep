@@ -102,13 +102,13 @@ param azureOpenAIResourceName string = 'openai-${resourceToken}'
 param azureOpenAISkuName string = 'S0'
 
 @description('Azure OpenAI Model Deployment Name')
-param azureOpenAIModel string = 'gpt-35-turbo-16k'
+param azureOpenAIModel string = 'gpt-4o'
 
 @description('Azure OpenAI Model Name')
-param azureOpenAIModelName string = 'gpt-35-turbo-16k'
+param azureOpenAIModelName string = 'gpt-4o'
 
 @description('Azure OpenAI Model Version')
-param azureOpenAIModelVersion string = '0613'
+param azureOpenAIModelVersion string = '2024-05-13'
 
 @description('Azure OpenAI Model Capacity - See here for more info  https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota')
 param azureOpenAIModelCapacity int = 30
@@ -169,13 +169,13 @@ param azureOpenAIApiVersion string = '2024-02-01'
 param azureOpenAIStream string = 'true'
 
 @description('Azure OpenAI Embedding Model Deployment Name')
-param azureOpenAIEmbeddingModel string = 'text-embedding-ada-002'
+param azureOpenAIEmbeddingModel string = 'text-embedding-3-large'
 
 @description('Azure OpenAI Embedding Model Name')
-param azureOpenAIEmbeddingModelName string = 'text-embedding-ada-002'
+param azureOpenAIEmbeddingModelName string = 'text-embedding-3-large'
 
 @description('Azure OpenAI Embedding Model Version')
-param azureOpenAIEmbeddingModelVersion string = '2'
+param azureOpenAIEmbeddingModelVersion string = '1'
 
 @description('Azure OpenAI Embedding Model Capacity - See here for more info  https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota')
 param azureOpenAIEmbeddingModelCapacity int = 30

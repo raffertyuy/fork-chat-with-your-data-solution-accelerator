@@ -103,11 +103,9 @@ class EnvHelper:
             self.AZURE_OPENAI_MODEL_NAME = azure_openai_model_info.get("modelName", "")
         else:
             # Otherwise, fallback to individual environment variables
-            self.AZURE_OPENAI_MODEL = os.getenv(
-                "AZURE_OPENAI_MODEL", "gpt-35-turbo-16k"
-            )
+            self.AZURE_OPENAI_MODEL = os.getenv("AZURE_OPENAI_MODEL", "gpt-4o")
             self.AZURE_OPENAI_MODEL_NAME = os.getenv(
-                "AZURE_OPENAI_MODEL_NAME", "gpt-35-turbo-16k"
+                "AZURE_OPENAI_MODEL_NAME", "gpt-4o"
             )
 
         self.AZURE_OPENAI_VISION_MODEL = os.getenv("AZURE_OPENAI_VISION_MODEL", "gpt-4")
@@ -136,7 +134,7 @@ class EnvHelper:
         else:
             # Otherwise, fallback to individual environment variable
             self.AZURE_OPENAI_EMBEDDING_MODEL = os.getenv(
-                "AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-ada-002"
+                "AZURE_OPENAI_EMBEDDING_MODEL", "text-embedding-3-large"
             )
 
         self.SHOULD_STREAM = (

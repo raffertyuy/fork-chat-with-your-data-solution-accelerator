@@ -65,7 +65,7 @@ def completions_mocking(httpserver: HTTPServer, app_config: AppConfig):
             "id": "chatcmpl-6v7mkQj980V1yBec6ETrKPRqFjNw9",
             "object": "chat.completion",
             "created": 1679072642,
-            "model": "gpt-35-turbo",
+            "model": "gpt-4o",
             "usage": {
                 "prompt_tokens": 40,
                 "completion_tokens": 50,
@@ -130,7 +130,7 @@ def test_post_makes_correct_calls_to_openai_embeddings_to_get_vector_dimensions(
             method="POST",
             json={
                 "input": [[1199]],
-                "model": "text-embedding-ada-002",
+                "model": "text-embedding-3-large",
                 "encoding_format": "base64",
             },
             headers={
@@ -196,7 +196,7 @@ def test_post_makes_correct_calls_to_openai_embeddings_to_embed_question_to_stor
                 "input": [
                     [3923, 374, 279, 7438, 315, 2324, 30]
                 ],  # Embedding of "What is the meaning of life?"
-                "model": "text-embedding-ada-002",  # this is hard coded in the langchain code base
+                "model": "text-embedding-3-large",  # this is hard coded in the langchain code base
                 "encoding_format": "base64",
             },
             headers={
